@@ -1,0 +1,429 @@
+FUNKO
+
+g_buildable.c:
+- staveni na sobe
+- PRKNO
+- spravne nataceni hovelu na zdi
+X nove omezeni poctu RC,OM,Hovel (unlimited do SD, limited na 1 po SD)
+- AMP
+- bush die attack
+- bublina
+- jumppad
+
+bg_misc.c:
+X nekonecno rc, om, hovel
+- staveni omu na strope
+- PRKNO
+- zarovnani smajliku
+- pulse sec, third attack
+- AMP
+- mina
+- flare
+- repair beam
+- bush die message
+- jumppad
+
+bg_public.h
+- PRKNO
+- zarovnani smajliku
+- zmena nazvu modu z BASE
+- AMP
+- mina
+- flare
+- repair beam
+- bush die message
+- jumppad
+- oblacek nad poisoned
+
+tremulous.h:
+- PRKNO
+- mina
+- flare
+- jumppad
+
+g_local.h
+X nove omezeni poctu RC,OM,Hovel (unlimited do SD, limited na 1 po SD)
+- pulse sec, third attack
+- AMP
+- mina
+- flare
+- ip2c
+- credits reward
+
+g_cmds.c:
+X muze decnout rc/om pokud jich je vic jak 1 v SD
+- zmena textu pro armu
+- vote pro nextmap zvyrazneny
+- prepnuti nabiteho luci nejde (bind)
+- obnoveno draw
+- prepnuti nabiteho luci nejde (toggleitem)
+- fixed votehax
+- nove omezeni poctu RC,OM,Hovel (unlimited do SD, limited na 1 po SD)
+- team safe join
+- verejne hlasovani
+- vote extedn sd
+- bubliny
+- credits reward
+
+g_main.c:
+- nextmap je atcs, pokud je jina mapa a nikdo nenastavil nextmap
+- AMP
+- vote delay
+- ip2c
+- jumppad
+
+bg_pmove.c:
+- prepnuti nabiteho luci nejde (vystreli) (kolecko na mysi)
+- alien wallwalk na budovach
+- marauder jump od budov a hracu
+x alien wallwalk na lidech a alienech
+
+cgame/cg_players.c:
+- smajlik nad hlavou
+- corpsenum neshodi klienta
+- zarovnani smajliku
+- bublina
+
+cgame/cg_draw.c
+- kdyz se pripravuju umistit budovu, neukazuji se HP budov
+- bublina
+
+cgame/cg_weapons.c
+- mina
+- flare
+
+qcommon/q_shared.c
+- fixed votehax
+
+g_missile.c:
+- pulse sec, third attack
+- mina
+- mina vybuchuje jen kdyz je videt
+- flare
+- bamboo reflect
+
+g_weapon.c
+- pulse sec, third attack
+- rychlejsi staveni bricku a flower
+- mina
+- flare
+- repair beam
+- leceni hracu ckitem
+
+game/g_spawn.c:
+- AMP
+- mina
+- flare
+
+game/g_combat.c:
+- AMP
+- mina
+- flare
+- bush die message
+- credits reward
+
+game/g_target.c:
+- AMP
+
+game/g_mover.c:
+- AMP
+
+game/g_utils.c:
+- AMP
+
+game/g_trigger.c:
+- AMP
+
+game/g_physic.c
+- staveni z boku
+
+game/g_active.c
+- mina
+- flare
+- credit rewards
+- oblacek nad poisoned
+
+cgame/cg_event.c
+- mina (zabiti sama sebe)
+- repair beam
+- bush die particle
+- bush die message
+- barevne giby
+- oblacek nad poisoned
+
+cgame/cg_local.h
+X repair beam
+- bublina
+- barevne giby
+- jumppad
+
+cgame/cg_weapons.c
+X repair beam
+
+cgame/cg_main.c
+- bush die particle
+- bublina
+- barevne giby
+- jumppad
+- fps boost
+- oblacek nad poisoned
+
+cgame/cg_local.h
+- bush die particle
+- oblacek nad poisoned
+
+cgame/cg_buildable.c
+- bush die particle
+- barevne giby
+- jumppad
+
+game/g_svcmds.c
+- arma
+- vote delay
+
+cgame/cg_servercmds.c
+- bubliny
+
+game/g_client.c
+- ip2c
+- credit rewards
+- ip ban fix
+
+qcommon/IpToCountryResolver.c pridany cely soubor
+- ip2c 
+
+qcommon/IpToCountryResolver.h pridany cely soubor
+- ip2c
+
+makefile
+- ip2c (pridan radek $(B)/base/qcommon/IpToCountryResolver.o))
+
+game/g_admin.c
+- ip2c
+
+game/g_admin.h
+- ip2c
+
+cgame/cg_predict.c
+- fps boost
+
+zmeny:
+3:
+-- zmena barev egg down
+-- zmena kecu pri warn
+-- tichy buildlog
+-- armageddon
+
+4:
+-- arma, humanum zustanou nejaky veci
+
+5:
+-- zmena arma, texty, pridano zabijeni s3 alienu, voleni az po 20 minutach, zustane jen posledni egg
+-- opraveno zabijeni humanu
+
+6:
+-- nesmi bejt zadny NO pri voleni arma
+
+7:
+-- arma potrebuje 70% vote yes
+-- zvuky pri spawnu
+-- zrychleni bouchani arma budov
+-- snizena regenerace tyranta
+
+8:
+-- snad opravena funkce vote arma
+
+9:
+-- podpora detekce anti aimbot klienta v listplayers
+-- arma nejde zvolit pokud maj alieni jen OM
+-- OM je znicen az nakonec v arma
+-- volit arma se muze kdykoli, pokud uzivatel muze ban
+
+10:
+-- playsound
+
+11:
+-- pozmeneny playsound na g_addevent
+-- arma znici spawny ale ne alieny
+
+12:
+-- lak5.5
+-- g_shove fixed
+-- zrychleno vybuchovani arma
+-- egg/node down psat se zvukem
+-- arma znici rc ale ne om
+
+13:
+-- arma neznici rc ani om
+-- zpomaleno vybuchovani arma
+
+14:
+-- boti
+
+**********
+Funserver* veci oznaceny jako ++ jsou zasahy mimo zdrojaky
+**********
+15:
+-- svdemos
+
+16:
+-- muze decnout rc/om pokud jich je vic jak 1 v SD
+-- zmena textu pro armu
+-- vote pro nextmap zvyrazneny
+-- nextmap je atcs, pokud je jina mapa a nikdo nenastavil nextmap
+
+17:
+-- nejde zmenit nabitej luci
+-- opraven decon dead pri SD
+-- obnoveno draw
+-- cgame backport
+-- plank, crate, pillar, brick, flag
+-- barikada jde stavet na strope
+++ granat hodne coudi, particle
+
+18:
+-- container, bamboo, bricka, bridge, bush, flower, grass, reed, rock
+-- kdyz se pripravuju umistit budovu, neukazuji se HP budov
+-- nejde zmenit nabitej luci (toggleitem)
+-- flaga jde postavit bez egg
+-- alien pasivni budovy vybuchujou hned
+-- snizeno splash damage pasiv h budov
+-- flag stoji 1bp
+-- corpsenum neshodi klienta
+-- zarovnani smajliku
+++ animace flagu pri zniceni
+++ z alienu lita maso
+
+19:
+-- spravne nataceni hovelu na zdi
+-- fixed votehax
+-- novy limit om/rc/hovel
+
+20:
+-- proc arma nici rc? - nevim ale opraveno, byl tam primo na to umyslnej kus kodu
+-- proc se pomalu stavi bricky?
+-- pulse second and third attack
+xx AMP
+
+21:
+-- staveni z boku
+-- wallwalk na budovach, train, door
+++ novej luci
+
+22:
+-- oprava wallwalk
+
+23:
+-- mina
+
+24:
+-- upravena mina a vybuchuje jen kdyz je videt nepritel a ne pres zed
+
+25:
+-- zmena ceny miny v armoury na 400
+-- flare
+-- marauder jump i od budov a hracu
+xx wallwalk po hracich
+-- leceni hracu ckitem
+xx paprsek pi opravov? 
+++ piliny z pily jinak
+-- /team humans safe
+-- bush attack
+
+26:
+-- verejne hlasovani
+   ruzne skiny
+   granaty jdou odkopnout
+   oslepujici granat STAT_STAMINA
+   opravit piliny aby se natacely
+   humani teleport
+   ruzne smajliky nad hlavou
+-- vote extedn sd
+
+27:
+-- strom misto reed
+++ human?rtv?nimace budov
+++ alien?tav? animace budov
+-- originalni limit omu
+-- pain zvuky k alienim budovam
+++ layouty za?aj?a velk??eno
+
+28:
+-- bamboo reflect
+-- reduced mine damage, adv goon will survive
+   opravit - /builder neukazuje ID revertle budovy
+   pri vykopnuti s vypnutym downloadem napsat uzivateli jak ho ma zapnout, misto hlaseni unpure pk3...
+   jetpack 2
+   
+29:
+-- bubliny
+-- zmenit popis u bamboo v hudu pri staveni
+
+30:
+-- bubliny - spectator fix
+
+31:
+-- bubliny spec final fix
+-- admin teamchat dela zvuky nalezici teamu
+-- cg_bubbllezoom
+
+32:
+-- ip2c
+-- zvetsit limit pro nick v bubline (fixed area names)
+-- zvetsena vzdalenost pro viditelnost bublin
+-- teamvote "voted yes" fixed"
+ team text v bublinach muze admin videt kdyz hraje i u druheho tymu
+ 
+33:
+-- fixed ignore
+-- fixed teamchat sound
+-- barevne giby (jen om)
+
+34:
+-- fixed zvuk ignore
+-- fixed spectator v bubline pri follow
+-- fixed spectator teamchat zvuk pri follow
+-- ostatni barevne giby krome armoury a tree
+-- strom podstavu nezmensovat
+
+35:
+-- fps boost
+
+36:
+-- credits reward in sd etc
+
+37:
+-- game funko (novy spousteni serveru?)
+-- plank ukazuje ze je usable (hand))
+-- fps boost na prikaz, default 0
+-- shotgun sound
+-- otestovat glow md
+-- barb splash
+-- zlati battlesuiti (glow nejde nikde, nevim proc)
+-- alien zamerovace
+-- lcannon sparks
+-- ckit texture
+-- vratit luci
+-- krev na zemi
+-- silnejsi flare
+-- wolfbr - (blaster), (rifle mark), (shotgun), (md), (chaingun), (bazi gas), (adv goon barb), (marky)
+-- jumppad (zvuk, model, particle zniceni, animce build, je pod zemi), vyssi HP
+--  poison clovek ma nad hlavou oblacek
+ vsechny funko prikazy sjednotit na c/g_rotaxNAZEV
+ zraneni hraci
+ kdyz do budovy mlatim/strilim, at to vzdy breci vzhledove, jiskry, kyselina
+ flower zezluti obraz
+ barevny flare (barva se definuje v weapon.cfg)
+
+38:
+-- novy skore
+
+39:
+-- staveni bricku za 0b
+
+40:
+-- ip ban fix
+
+41:
+-- acid bomb
+-- cg_bounceparticles 2
